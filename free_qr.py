@@ -1,8 +1,23 @@
 import pyqrcode
 
-new_qrcode = input('Insert link (or type exit): ')
+print('''
+Welcome to free_qr. This is a simple script
+that makes QR codes for you! At any point, 
+if you want to (e)xit, just type 'e'. 
 
-if new_qrcode == "exit":
+If you're interested in contributing to 
+the project, feel free to fork it and 
+send a PR.
+	  
+Warm regards,
+Felipe
+''')
+
+new_qrcode = input('Insert link (or type exit): ')
+if new_qrcode == "e":
+	exit()
+name_qrcode = input('Name your file: ')
+if name_qrcode == "e":
 	exit()
 
 qr = pyqrcode.create(new_qrcode)
